@@ -1,0 +1,67 @@
+
+
+/* VARIABLES GLOBALES (THEME) */
+:root {
+
+    /* Paleta de colores */
+    --color-primario: #771414;      
+    --color-secundario: #FFD500;    
+    --color-fondo: #f7f7f7;
+    --color-texto: #222;
+    --color-texto-suave: #555;
+    --color-blanco: #ffffff;
+
+    /* Tipografías */
+    --font-principal: "Inter", Arial, sans-serif;
+    --font-titulos: "Poppins", sans-serif;
+
+    /* Espaciado */
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 32px;
+
+    /* Bordes y sombras */
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+
+
+/* Contenedor general del contenido */
+#content {
+    display: flex;
+    flex-direction:column;             /* Centra el recuadro horizontalmente */
+    justify-content: center;
+    /* padding: 40px 20px;        Espaciado general */
+}
+
+/* Recuadro principal */
+.page-content {
+    display: flex;
+    flex-direction: column;    /* Orden vertical */
+    gap: 20px;                 /* Espacio entre h1 y p */
+    
+    width: 100%;
+    /* max-width: 900px;          Tamaño del recuadro */
+    background: var(--color-fondo);       /* Fondo blanco */
+    padding: 40px;
+    border-radius: 12px;       /* Bordes redondeados */
+    box-shadow: var(--shadow); /* Sombra suave */
+    
+    border: 1px solid #e5e5e5; /* Ligerísimo borde */
+}
+
+/* Estilos del título */
+.page-content h1 {
+    font-size: 2rem;
+    color: #222;
+    margin: 0;
+}
+
+/* Estilos del párrafo */
+.page-content p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
