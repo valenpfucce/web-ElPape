@@ -1,0 +1,68 @@
+#header {
+  
+  background:white;
+   position: relative;
+   z-index: 10;
+   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.9);
+   width: 100%;
+  max-width: 100%;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 20px ;
+  width: 100%;
+  box-sizing: border-box;
+  
+
+}
+
+/* izquierda: el logo */
+.left {
+  justify-self: start;
+}
+
+.center {
+
+  justify-self: center;
+  
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo-header-content {
+  width: 200px;   /* Ajustá el tamaño según prefieras */
+  height: auto;
+}
+
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0 15px;  /* ← elimina el padding por defecto del UL */
+  margin: 20px;    /* ← opcional, para limpiar también el margin */
+  
+
+}
+
+.menu-list a {      /* Estilos de los enlaces del menú */
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  padding: 15px;
+  margin: 10px 10px 10px 10px  ;
+
+}
+
+.menu-list li {
+    padding: 0 15px;
+    border-left: 1px solid #555;   /* Línea antes */
+    border-right: 1px solid #555;  /* Línea después */
+}
+

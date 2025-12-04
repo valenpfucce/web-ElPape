@@ -1,5 +1,4 @@
 
-
 /* VARIABLES GLOBALES (THEME) */
 :root {
 
@@ -41,59 +40,6 @@ body, html {
      
 }
 
-#header {
-  
-  background:white;
-   position: relative;
-   z-index: 10;
-   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.9);
-   width: 100%;
-  max-width: 100%;
-}
-
-.header-content {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: 20px 40px;
-  width: 100%;
-  box-sizing: border-box;
-  
-
-}
-
-/* izquierda: el logo */
-.left {
-  justify-self: start;
-}
-
-.center {
-  justify-self: center;
-}
-
-.right {
-  justify-self: end;
-}
-
-.logo-header-content {
-  width: 200px;   /* Ajustá el tamaño según prefieras */
-  height: auto;
-}
-
-
-.menu-list {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-list a {      /* Estilos de los enlaces del menú */
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-}
 
 /* Recuadro principal */
 .page-content {
