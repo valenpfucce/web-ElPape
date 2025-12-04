@@ -4,9 +4,9 @@
 :root {
 
     /* Paleta de colores */
-    --color-primario: #771414;      
+    --color-primario: #a16565;      
     --color-secundario: #FFD500;    
-    --color-fondo: #f7f7f7;
+    --color-fondo: #ffffff;
     --color-texto: #222;
     --color-texto-suave: #555;
     --color-blanco: #ffffff;
@@ -25,26 +25,87 @@
     --shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-
+body, html {
+  margin: 0;
+  padding: 0;
+}
 
 /* Contenedor general del contenido */
 #content {
     display: flex;
-    flex-direction:column;             /* Centra el recuadro horizontalmente */
-    justify-content: center;
-    /* padding: 40px 20px;        Espaciado general */
+    flex-direction:column;            /* Centra el recuadro horizontalmente */
+    align-items: center;              /* Ocupa toda la altura de la pantalla */
+    background: var(--color-primario);   /* Color de fondo */
+    padding-top: 40px;
+    padding-bottom: 40px;        /*Espaciado general */
+     
+}
+
+#header {
+  
+  background:white;
+   position: relative;
+   z-index: 10;
+   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.9);
+   width: 100%;
+  max-width: 100%;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  
+
+}
+
+/* izquierda: el logo */
+.left {
+  justify-self: start;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo-header-content {
+  width: 200px;   /* Ajustá el tamaño según prefieras */
+  height: auto;
+}
+
+
+.menu-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list a {      /* Estilos de los enlaces del menú */
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
 }
 
 /* Recuadro principal */
 .page-content {
     display: flex;
     flex-direction: column;    /* Orden vertical */
-    gap: 20px;                 /* Espacio entre h1 y p */
-    
-    width: 100%;
-    /* max-width: 900px;          Tamaño del recuadro */
+    justify-content: center;
+    margin: 80px;                 /* Espacio entre h1 y p */
+    align-items: center;
+    width: 90%;               /* Ancho del recuadro */
+    max-width: 90%;          /*Tamaño del recuadro */
     background: var(--color-fondo);       /* Fondo blanco */
-    padding: 40px;
+    padding-bottom: 20%;
     border-radius: 12px;       /* Bordes redondeados */
     box-shadow: var(--shadow); /* Sombra suave */
     
@@ -65,3 +126,4 @@
     line-height: 1.6;
     margin: 0;
 }
+
