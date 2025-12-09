@@ -9,9 +9,11 @@
 }
 
 .header-content {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 50px; 
+  height: 100%;
   padding: 15px ;
   width: 100%;
   box-sizing: border-box;
@@ -19,7 +21,7 @@
 }
 
 
-.left {
+/* .left {
   justify-self: start;
 }
 
@@ -30,7 +32,7 @@
 
 .right {
   justify-self: end;
-} 
+}  */
 
 .horarios {
   display: flex;
