@@ -12,57 +12,113 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 20px ;
+  padding: 15px ;
   width: 100%;
   box-sizing: border-box;
-  
 
 }
 
-/* izquierda: el logo */
+
 .left {
   justify-self: start;
 }
 
 .center {
-
+  padding: 10px;
   justify-self: center;
-  
 }
 
 .right {
   justify-self: end;
+} 
+
+.horarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  font-family: var(--font-header-menu);
+  padding: 20px;
 }
 
 .logo-header-content {
-  width: 200px;   /* Ajustá el tamaño según prefieras */
+  width: 280px;   /* Ajustá el tamaño según prefieras */
   height: auto;
 }
 
 
 .menu-list {
-  display: flex;
-  align-items: center;
   list-style: none;
-  gap: 20px;
-  padding: 0 15px;  /* ← elimina el padding por defecto del UL */
-  margin: 20px;    /* ← opcional, para limpiar también el margin */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items:center;
   
-
-}
-
-.menu-list a {      /* Estilos de los enlaces del menú */
-  text-decoration: none;
-  color: #000;
-  font-size: 18px;
-  padding: 15px;
-  margin: 10px 10px 10px 10px  ;
-
 }
 
 .menu-list li {
-    padding: 0 15px;
-    border-left: 1px solid #555;   /* Línea antes */
-    border-right: 1px solid #555;  /* Línea después */
+  display: flex;
+  align-items: center;
+  
 }
+
+.menu-list li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  padding: 15px 32px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  letter-spacing: 1px;
+  font-family: var(--font-header-menu);
+  font-weight: 440;
+  
+}
+
+
+/* .menu-list li:first-child {
+  border-left: 2px solid #3d3838;
+}  */
+
+
+/* líneas entre elementos y al final */
+/* .menu-list li {
+  border-right: 2px solid #3d3838;
+}  */
+
+
+/* hover */
+.menu-list li :hover {
+  color: white;
+  background-color: var(--color-primario);
+  transition: background-color 0.3s ease;
+}
+
+
+.search-bar {
+    background-color: #000000; /* Fondo negro */
+    width: 100%;
+    display: flex;             /* Activa Flexbox */
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;       /* Centra verticalmente */
+    padding: 12px 0;           /* Espacio arriba y abajo */
+    
+}
+
+.search-bar input#busqueda {
+    width: 50%;                /* Ocupa el 50% del ancho de la pantalla */
+    max-width: 600px;          /* Que no sea gigante en pantallas muy grandes */
+    padding: 8px 15px;
+    border-radius: 20px;       /* Bordes redondeados */
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+/* Efecto opcional al hacer click en el input */
+.search-bar input#busqueda:focus {
+    box-shadow: 0 0 6px var(--color-secundario); /* Usa tu variable de color amarillo */
+}
+
 
