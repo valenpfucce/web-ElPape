@@ -13,3 +13,12 @@ fetch("footer.html")
     document.getElementById("footer").innerHTML = data;
   })
   .catch(error => console.error("Error cargando footer:", error));
+
+
+// Cargar HOME
+fetch("home.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("home").innerHTML = data;
+  })
+  .catch(error => console.error("Error cargando header:", error));

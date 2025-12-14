@@ -21,19 +21,6 @@
 }
 
 
-/* .left {
-  justify-self: start;
-}
-
-.center {
-  padding: 10px;
-  justify-self: center;
-}
-
-.right {
-  justify-self: end;
-}  */
-
 .horarios {
   display: flex;
   flex-direction: column;
@@ -79,19 +66,8 @@
 }
 
 
-/* .menu-list li:first-child {
-  border-left: 2px solid #3d3838;
-}  */
-
-
-/* líneas entre elementos y al final */
-/* .menu-list li {
-  border-right: 2px solid #3d3838;
-}  */
-
-
 /* hover */
-.menu-list li :hover {
+.menu-list > li > a:hover {
   color: white;
   background-color: var(--color-primario);
   transition: background-color 0.3s ease;
@@ -124,3 +100,63 @@
 }
 
 
+
+
+
+
+/* --- ESTILOS DEL SUBMENÚ DESPLEGABLE --- */
+
+/* Aseguramos que el li padre sea la referencia de posición */
+.menu-list li {
+    position: relative;
+}
+
+/* Estilo inicial del submenú (oculto) */
+.submenu {
+    display: none;          /* Oculto por defecto */
+    position: absolute;     /* Flota sobre el contenido */
+    top: 100%;              /* Aparece justo debajo del botón */
+    left: 0;
+    background-color: white;
+    min-width: 200px;       /* Ancho mínimo */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra para resaltar */
+    z-index: 100;           /* Asegura que esté por encima de todo */
+    padding: 0;
+    flex-direction: column; /* Elementos uno debajo del otro */
+}
+
+/* MOSTRAR el menú cuando pasas el mouse por el li padre */
+.menu-list li:hover .submenu {
+    display: flex;
+}
+
+/* Ajustes para los items del submenú */
+.submenu li {
+   display: block;  
+   border: none;           /* Quitamos los bordes del menú principal */
+    width: 100%;            /* Ocupa todo el ancho */
+    text-align: center;
+}
+
+.submenu li a {
+    padding: 12px 16px;     /* Espaciado interno cómodo */
+    font-size: 14px;        /* Un poco más chico que el menú principal */
+    display: block;
+    text-align: center;       /* Texto alineado a la izquierda */
+    border-bottom: 1px solid #eee; /* Separador sutil */
+
+    /* Reseteamos cosas que podrían heredarse del menú principal */
+    height: auto;           
+    font-weight: normal;
+}
+
+/* Quitar el borde del último elemento */
+.submenu li:last-child a {
+    border-bottom: none;
+}
+
+/* Hover específico para los items del submenú */
+.submenu li a:hover {
+  background-color: gray; /* Usa tu color rojo */
+  color: white;
+}
