@@ -35,7 +35,7 @@ body, html {
     width: 100%;
     max-width: 100%;
     padding: 0;
-    background: #fff; /* Fondo blanco limpio como Bandex */
+    background: #fff; 
     display: block;   /* Quitamos el flex anterior para manejar bloques normales */
 }
 
