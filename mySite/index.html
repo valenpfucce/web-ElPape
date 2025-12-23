@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Mi Página Web</title>
+    <title>El Papelero</title>
     <meta name="description" content="Distribuidora mayorista y minorista de artículos de papelera, descartables, artículos de librería y artículos de oficina. Entrega rápida, amplio catálogo y precios competitivos para comercios, empresas y consumidores.">
     
     <meta name="keywords" content="papelera mayorista, papelera minorista, distribuidora de papelera, distribuidora de descartables, artículos de librería mayorista, venta de insumos de oficina, proveedor de artículos de librería, 
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/home.css">
     
     <!-- FUENTE -->   
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,37 +36,27 @@
 
 <body>
 
-    <!-- HEADER reutilizable -->
+    <!-- HEADER  -->
     <div id="header"></div>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main id="content">
-        <div class="page-content">
-             <h1>Bienvenido Papelero</h1>
-
-        </div>
-        <div class="page-content">
-
-            <!-- <img src="assets/img/logo-papelero.jpg" alt=" logo el Papelero"> -->
-            <p> Wordpress es una cagada </p>
-
-
-        </div>
-       
-
-
+      
+      <div id="home"></div>
+      
     </main>
-
-    <!-- FOOTER reutilizable -->
+ 
+    <!-- FOOTER  -->
     <div id="footer"></div>
 
 </body>
 
     <script src="scripts/main.js"></script>
     <script>
-        // Cargar header y footer (si los tenés por separado)
+        // Cargar header y footer 
         fetch("header.html").then(res => res.text()).then(html => document.getElementById("header").innerHTML = html);
         fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+        fetch("home.html").then(res => res.text()).then(html => document.getElementById("home").innerHTML = html);
     </script>
 
 

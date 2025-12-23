@@ -32,45 +32,14 @@ body, html {
 
 /* Contenedor general del contenido */
 #content {
-    display: flex;
-    flex-direction:column;            /* Centra el recuadro horizontalmente */
-    align-items: center;              /* Ocupa toda la altura de la pantalla */
-    background: var(--color-primario);   /* Color de fondo */
-    padding-top: 40px;
-    padding-bottom: 40px;        /*Espaciado general */
-     
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    background: #fff; 
+    display: block;   /* Quitamos el flex anterior para manejar bloques normales */
+    text-decoration: none;
 }
 
 
-/* Recuadro principal */
-.page-content {
-    display: flex;
-    flex-direction: column;    /* Orden vertical */
-    justify-content: center;
-    margin: 80px;                 /* Espacio entre h1 y p */
-    align-items: center;
-    width: 90%;               /* Ancho del recuadro */
-    max-width: 90%;          /*Tamaño del recuadro */
-    background: var(--color-fondo);       /* Fondo blanco */
-    padding-bottom: 20%;
-    border-radius: 12px;       /* Bordes redondeados */
-    box-shadow: var(--shadow); /* Sombra suave */
-    
-    border: 1px solid #e5e5e5; /* Ligerísimo borde */
-}
 
-/* Estilos del título */
-.page-content h1 {
-    font-size: 2rem;
-    color: #222;
-    margin: 0;
-}
-
-/* Estilos del párrafo */
-.page-content p {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.6;
-    margin: 0;
-}
 
