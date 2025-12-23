@@ -1,0 +1,128 @@
+.section-title-container {
+    padding: 40px 20px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-family: var(--font-header-menu);
+}
+
+/* --- BLOQUE 1: INFO CONTACTO --- */
+.contact-info-section {
+    padding: 40px 10%;
+    background-color: #fff;
+    font-family: var(--font-header-menu);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: var(--radius); 
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow); 
+    border-color: var(--color-secundario);
+}
+
+.info-card h3 {
+    color: var(--color-primario); 
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-family: var(--font-titulos);
+}
+
+.info-card p {
+    color: var(--color-texto-suave);
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.contact-link:hover {
+    color: var(--color-primario);
+    
+}
+
+.email-link {
+    font-size: 1rem;
+    word-break: break-all; /* Para que no se rompa en móviles */
+    margin: 10px;
+}
+
+/* Botones de Redes Sociales */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-social {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: 80%;
+    transition: opacity 0.3s;
+}
+
+.btn-social:hover {
+    opacity: 0.9;
+}
+
+.btn-social.whatsapp {
+    background-color: #25D366; /* Verde WhatsApp */
+}
+
+.btn-social.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Gradiente Instagram */
+}
+
+
+/* --- BLOQUE 2: MAPA --- */
+.map-section {
+    padding: 40px 5%;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: var(--font-header-menu);
+}
+
+.address-text {
+    font-family: var(--font-header-menu);
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    width: 100%;
+    
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #ccc; /* Placeholder carga */
+}
+
+iframe {
+    display: block; /* Elimina espacio blanco debajo del iframe */
+}
