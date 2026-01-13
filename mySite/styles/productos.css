@@ -1,0 +1,212 @@
+/* --- LAYOUT GENERAL --- */
+#content.products-page {
+    display: flex !important;           /* !important asegura que Flexbox se active sí o sí */
+    flex-direction: row;                /* Asegura que vayan lado a lado */
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    position: relative;
+    padding: 10px;
+    
+    /* ESTO ES LO QUE ELIMINA EL ESPACIO EN BLANCO: */
+    align-items: flex-start !important; /* Fuerza a que todo se pegue al techo */
+}
+
+/* --- MENÚ LATERAL IZQUIERDO --- */
+.sidebar-menu {
+    width: 260px;           
+    min-width: 260px;       
+    background: #f8f8f8;    
+    padding: 30px 20px;
+    border-right: 1px solid #ddd;
+    
+    /* Configuración Sticky */
+    position: sticky;       
+    top: 0;              
+    height: fit-content;            
+    max-height: 100vh; 
+    overflow-y: auto;       
+    z-index: 10;
+    
+    font-family: var(--font-header-menu);
+}
+
+.sidebar-menu h3 {
+    color: var(--color-texto);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-secundario);
+    text-transform: uppercase;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+    background-color: var(--color-primario);
+    color: white;
+    padding-left: 15px;
+}
+
+/* --- CONTENEDOR DE RUBROS (DERECHA) --- */
+.products-list {
+    flex: 1;                
+    
+    /* CLAVE 2: Quitamos mucho padding superior. Solo 20px. */
+    padding: 20px 50px 100px 50px; 
+    
+    display: flex;
+    flex-direction: column;
+    
+    /* CLAVE 3: Aseguramos que el contenido interno empiece ARRIBA */
+    justify-content: flex-start !important; 
+    align-items: center;    /* Centrado horizontalmente */
+}
+
+/* --- BLOQUE DE CADA RUBRO --- */
+.rubro-section {
+    width: 100%;
+    max-width: 80%;       
+    margin-bottom: 80px;   
+    
+    /* CLAVE 4: Aseguramos que no tenga margen superior excesivo */
+    margin-top: 0;
+    scroll-margin-top: 40px; 
+}
+
+.section-title {
+    text-align: left;       
+    font-size: 2rem;
+    color: var(--color-texto);
+    margin-bottom: 30px;
+    margin-top: 0; /* Aseguramos que el título no empuje hacia abajo */
+    border-left: 5px solid var(--color-secundario);
+    padding-left: 15px;
+    font-family: var(--font-titulos);
+}
+
+/* ESTRUCTURA FOTO + TEXTO */
+.rubro-main-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.rubro-img-principal {
+    flex: 1.2;              
+}
+
+.rubro-img-principal img {
+    width: 100%;
+    height: 450px;          
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.rubro-description {
+    flex: 1;
+    font-family: var(--font-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Texto alineado arriba */
+}
+
+.rubro-description p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.btn-vermas {
+    align-self: flex-start;
+    background-color: var(--color-texto);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-vermas:hover {
+    background-color: var(--color-primario);
+}
+
+/* GALERÍA PEQUEÑA ABAJO */
+.rubro-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+}
+
+.rubro-gallery img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.rubro-gallery img:hover {
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .products-page {
+        flex-direction: column;
+    }
+    .sidebar-menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+        max-height: none;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .sidebar-menu ul {
+        display: flex;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    .sidebar-menu li {
+        flex-shrink: 0;
+        margin: 0;
+    }
+    .products-list {
+        padding: 20px;
+    }
+    .rubro-main-content {
+        flex-direction: column;
+    }
+    .rubro-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

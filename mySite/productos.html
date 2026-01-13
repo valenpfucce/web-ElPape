@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - El Papelero</title>
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/productos.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main id="content" class="products-page">
+        <aside class="sidebar-menu">
+            <h3>RUBROS</h3>
+            <ul>
+                <li><a href="#gastronomia">Gastronomía</a></li>
+                <li><a href="#productores">Productores</a></li>
+                <li><a href="#limpieza">Limpieza</a></li>
+                <li><a href="#embalaje">Embalaje</a></li>
+                <li><a href="#comercios">Comercios</a></li>
+                <li><a href="#oficina">Oficina</a></li>
+                <li><a href="#franquicias">Franquicias</a></li>
+                <li><a href="#personalizados">Personalizados</a></li>
+                <li><a href="#catering">Catering</a></li>
+            </ul>
+        </aside>
+
+        <section class="products-list">
+            
+            <article id="gastronomia" class="rubro-section">
+                <h2 class="section-title">Gastronomía</h2>
+                <div class="rubro-main-content">
+                    <div class="rubro-img-principal">
+                        <img src="assets/img/frente-papelera-banner.jpg" alt="Gastronomía Principal">
+                    </div>
+                    <div class="rubro-description">
+                        <p>Soluciones integrales para el sector gastronómico. Contamos con una amplia variedad de descartables de alta calidad, aprobados por SENASA, ideales para restaurantes, rotiserías y servicios de comida.</p>
+                        <a href="https://wa.me/" class="btn-vermas">Consultar Presupuesto</a>
+                    </div>
+                </div>
+                <div class="rubro-gallery">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 1">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 2">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 3">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 4">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 5">
+                </div>
+            </article>
+
+            <article id="productores" class="rubro-section">
+                <h2 class="section-title">Productores</h2>
+                <div class="rubro-main-content">
+                    
+                    <div class="rubro-description">
+                        <p>Insumos específicos para la cadena de producción. Calidad garantizada para el embalaje y protección de sus productos desde el origen hasta el punto de venta.</p>
+                        <a href="https://wa.me/" class="btn-vermas">Ver Catálogo</a>
+                    </div>
+                    
+                    
+                    <div class="rubro-img-principal">
+                        <img src="assets/img/frente-papelera-banner.jpg" alt="Productores Principal">
+                    </div>
+                    
+                </div>
+                <div class="rubro-gallery">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 1">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 2">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 3">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 4">
+                    <img src="assets/img/bolsas-kp-colores.JPG" alt="Galería 5">
+                </div>
+            </article>
+
+            </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        // Carga de componentes compartidos
+        fetch("header.html").then(res => res.text()).then(html => document.getElementById("header").innerHTML = html);
+        fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+</body>
+</html>
