@@ -1,36 +1,44 @@
 <header id="header">
+    <!-- Checkbox Hack para controlar el estado del menú lateral en móviles sin usar Javascript -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+    <label for="menu-toggle" class="menu-overlay"></label>
   
     <div class="header-content">
     
      <div class="left">      
-         <img src="assets/img/logo-papelero-header.jpg" class="logo-header-content" alt="logo el Papelero header">
+         <a href="./"><img src="assets/img/logo-papelero-header.jpg" class="logo-header-content" alt="logo el Papelero header" ></a>
      </div>  
     
-     <nav class="center">
-       <ul class="menu-list">
-         <li><a href="./">INICIO</a></li>
-          <li class="dropdown">
-              <a href="./">PRODUCTOS ▾</a> <ul class="submenu">
-              <li><a href="#">Papelería</a></li>
-              <li><a href="#">Librería</a></li>
-              <li><a href="#">Descartables</a></li>
-              <li><a href="#">Oficina</a></li></ul>
-          </li>
-         <li><a href="./">EMPRESA</a></li>
-         <li><a href="contacto.html">CONTACTANOS</a></li>
-       </ul>
+     <nav class="center nav-menu">
+        <ul class="menu-list">
+          <li><a href="./">INICIO</a></li>
+           <li class="dropdown">
+               <a href="productos.html">PRODUCTOS ▾</a>
+               <ul class="submenu">
+                   <li><a href="#">Papelería</a></li>
+                   <li><a href="#">Librería</a></li>
+                   <li><a href="#">Descartables</a></li>
+                   <li><a href="#">Oficina</a></li>
+               </ul>
+           </li>
+          <li><a href="./">EMPRESA</a></li>
+          <li><a href="contacto.html">CONTACTANOS</a></li>
+        </ul>
      </nav>
     
      <div class="right">
-        <!-- <img src="assets/img/telefono-icono.png" class="icono-telefono-header" alt="icono teléfono header"> -->
         <div class="horarios">
-
           <span class="telefono-header-content"> LUN A VIE: 8:30 - 16:00 /</span> 
           <span class="telefono-header-content">  SAB: 8.30 - 13:00</span> 
-
         </div>
-        
      </div> 
+
+     <!-- Botón de Hamburguesa de 3 líneas -->
+     <label for="menu-toggle" class="hamburger-btn">
+         <span></span>
+         <span></span>
+         <span></span>
+     </label>
 
     </div>
 
@@ -38,9 +46,4 @@
        <input type="text" id="busqueda" placeholder="Buscar producto...">
        <div id="resultado"></div>
     </div>
-
-
-
-
   </header>
-

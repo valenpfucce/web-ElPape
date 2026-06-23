@@ -1,162 +1,316 @@
 #header {
-  
-  background:white;
-   position: relative;
-   z-index: 10;
-   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.9);
-   width: 100%;
-  max-width: 100%;
+    background: var(--color-blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    transition: var(--transition-normal);
+    border-bottom: 1px solid var(--color-borde);
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px; 
-  height: 100%;
-  padding: 15px ;
-  width: 100%;
-  box-sizing: border-box;
-
-}
-
-
-.horarios {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 13px;
-  font-family: var(--font-header-menu);
-  padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .logo-header-content {
-  width: 280px;   /* Ajustá el tamaño según prefieras */
-  height: auto;
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: var(--transition-normal);
 }
 
+.logo-header-content:hover {
+    transform: scale(1.02);
+}
 
 .menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items:center;
-  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.menu-list li {
-  display: flex;
-  align-items: center;
-  
-}
-
-.menu-list li a {
-  text-decoration: none;
-  color: #000;
-  font-size: 15px;
-  padding: 15px 32px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  letter-spacing: 1px;
-  font-family: var(--font-header-menu);
-  font-weight: 440;
-  
-}
-
-
-/* hover */
-.menu-list > li > a:hover {
-  color: white;
-  background-color: var(--color-primario);
-  transition: background-color 0.3s ease;
-}
-
-
-.search-bar {
-    background-color: #000000; /* Fondo negro */
-    width: 100%;
-    display: flex;             /* Activa Flexbox */
-    justify-content: center;   /* Centra horizontalmente */
-    align-items: center;       /* Centra verticalmente */
-    padding: 12px 0;           /* Espacio arriba y abajo */
-    
-}
-
-.search-bar input#busqueda {
-    width: 50%;                /* Ocupa el 50% del ancho de la pantalla */
-    max-width: 600px;          /* Que no sea gigante en pantallas muy grandes */
-    padding: 8px 15px;
-    border-radius: 20px;       /* Bordes redondeados */
-    border: none;
-    outline: none;
-    font-size: 1rem;
-}
-
-/* Efecto opcional al hacer click en el input */
-.search-bar input#busqueda:focus {
-    box-shadow: 0 0 6px var(--color-secundario); /* Usa tu variable de color amarillo */
-}
-
-
-
-
-
-
-/* --- ESTILOS DEL SUBMENÚ DESPLEGABLE --- */
-
-/* Aseguramos que el li padre sea la referencia de posición */
 .menu-list li {
     position: relative;
 }
 
-/* Estilo inicial del submenú (oculto) */
-.submenu {
-    display: none;          /* Oculto por defecto */
-    position: absolute;     /* Flota sobre el contenido */
-    top: 100%;              /* Aparece justo debajo del botón */
-    left: 0;
-    background-color: white;
-    min-width: 200px;       /* Ancho mínimo */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra para resaltar */
-    z-index: 100;           /* Asegura que esté por encima de todo */
-    padding: 0;
-    flex-direction: column; /* Elementos uno debajo del otro */
+.menu-list li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 0.5px;
+    font-family: var(--font-header-menu);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-normal);
 }
 
-/* MOSTRAR el menú cuando pasas el mouse por el li padre */
-.menu-list li:hover .submenu {
+/* Hover premium */
+.menu-list > li > a:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+}
+
+/* Horarios */
+.horarios {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.75rem;
+    font-family: var(--font-header-menu);
+    color: var(--color-texto-suave);
+    border-left: 2px solid var(--color-secundario);
+    padding-left: 15px;
+    line-height: 1.4;
 }
 
-/* Ajustes para los items del submenú */
+.telefono-header-content {
+    font-weight: 500;
+}
+
+/* --- BARRA DE BÚSQUEDA --- */
+.search-bar {
+    background-color: var(--color-texto); /* Color oscuro elegante */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+.search-bar input#busqueda {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-blanco);
+    outline: none;
+    font-size: 0.95rem;
+    font-family: var(--font-principal);
+    transition: var(--transition-normal);
+}
+
+.search-bar input#busqueda::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar input#busqueda:focus {
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 3px rgba(255, 213, 0, 0.3);
+}
+
+/* --- SUBMENÚ DESPLEGABLE PREMIUM --- */
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-blanco);
+    min-width: 220px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-borde);
+    z-index: 100;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+/* Mostrar menú en hover */
+.menu-list li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .submenu li {
-   display: block;  
-   border: none;           /* Quitamos los bordes del menú principal */
-    width: 100%;            /* Ocupa todo el ancho */
-    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .submenu li a {
-    padding: 12px 16px;     /* Espaciado interno cómodo */
-    font-size: 14px;        /* Un poco más chico que el menú principal */
+    padding: 10px 20px;
+    font-size: 0.85rem;
     display: block;
-    text-align: center;       /* Texto alineado a la izquierda */
-    border-bottom: 1px solid #eee; /* Separador sutil */
-
-    /* Reseteamos cosas que podrían heredarse del menú principal */
-    height: auto;           
-    font-weight: normal;
+    text-align: left;
+    border-radius: 0;
+    font-weight: 500;
+    color: var(--color-texto);
+    transition: var(--transition-fast);
 }
 
-/* Quitar el borde del último elemento */
-.submenu li:last-child a {
-    border-bottom: none;
-}
-
-/* Hover específico para los items del submenú */
 .submenu li a:hover {
-  background-color: gray; /* Usa tu color rojo */
-  color: white;
+    background-color: var(--color-primario-suave);
+    color: var(--color-primario);
+    padding-left: 25px; /* Efecto sutil de desplazamiento lateral */
+}
+
+/* --- ELEMENTOS DE MENU LATERAL PARA MOVIL --- */
+.menu-toggle-checkbox {
+    display: none !important;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(30, 30, 34, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1001; /* Arriba del drawer */
+    transition: var(--transition-normal);
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--color-texto);
+    border-radius: var(--radius-full);
+    transition: var(--transition-normal);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    #header {
+        position: relative;
+        top: auto;
+    }
+
+    .header-content {
+        flex-direction: row; /* Alinear logo a la izquierda y hamburguesa a la derecha */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo-header-content {
+        height: 42px;
+    }
+
+    .right {
+        display: none; /* Ocultar horarios del header principal en móvil */
+    }
+
+    .hamburger-btn {
+        display: flex; /* Mostrar botón de hamburguesa */
+    }
+
+    /* Cajón lateral (Drawer Menu) */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-blanco);
+        z-index: 999;
+        box-shadow: var(--shadow-lg);
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        padding: 90px 24px 40px 24px;
+        align-items: stretch;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        overflow-y: auto;
+        align-items: stretch;
+    }
+
+    .menu-list li {
+        width: 100%;
+        scroll-snap-align: none;
+        flex-shrink: 1;
+    }
+
+    .menu-list li a {
+        font-size: 1rem;
+        padding: 12px 18px;
+        width: 100%;
+        white-space: normal;
+        background-color: transparent;
+        border: none;
+        color: var(--color-texto);
+        font-weight: 600;
+        display: block;
+        border-radius: var(--radius-sm);
+        transition: var(--transition-normal);
+    }
+
+    .menu-list li a:hover {
+        background-color: var(--color-primario-suave);
+        color: var(--color-primario);
+    }
+
+    .submenu {
+        display: none !important;
+    }
+
+    /* Mostrar overlay y deslizar menú cuando está activado */
+    .menu-toggle-checkbox:checked ~ .menu-overlay {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle-checkbox:checked ~ .header-content .nav-menu {
+        transform: translateX(0);
+    }
+
+    /* Animación de Hamburguesa a 'X' */
+    .menu-toggle-checkbox:checked ~ .header-content .hamburger-btn span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: var(--color-primario);
+    }
+
+    .menu-toggle-checkbox:checked ~ .header-content .hamburger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ .header-content .hamburger-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: var(--color-primario);
+    }
 }
