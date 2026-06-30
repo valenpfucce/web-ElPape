@@ -24,7 +24,10 @@
     height: 60px;
     width: auto;
     display: block;
-    transition: var(--transition-normal);
+    transition: transform var(--transition-normal);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .logo-header-content:hover {
@@ -65,25 +68,42 @@
     background-color: var(--color-primario);
 }
 
-/* Horarios */
-.horarios {
+/* Instagram icon in header */
+.right {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 0.75rem;
-    font-family: var(--font-header-menu);
-    color: var(--color-texto-suave);
-    border-left: 2px solid var(--color-secundario);
-    padding-left: 15px;
-    line-height: 1.4;
+    align-items: center;
 }
 
-.telefono-header-content {
-    font-weight: 500;
+.header-instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    position: relative;
+    padding-left: 30px;
 }
 
-/* --- BARRA DE BÚSQUEDA --- */
-.search-bar {
+.header-instagram-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 24px;
+    background-color: var(--color-borde);
+}
+
+
+.header-instagram-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+/* --- BARRA DE HORARIOS (BOTTOM HEADER) --- */
+.header-horarios-bar {
     background-color: var(--color-texto); /* Color oscuro elegante */
     width: 100%;
     display: flex;
@@ -91,31 +111,14 @@
     align-items: center;
     padding: 10px 20px;
     border-bottom: 2px solid var(--color-secundario);
+    font-family: var(--font-header-menu);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.5px;
 }
 
-.search-bar input#busqueda {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px 20px;
-    border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--color-blanco);
-    outline: none;
-    font-size: 0.95rem;
-    font-family: var(--font-principal);
-    transition: var(--transition-normal);
-}
-
-.search-bar input#busqueda::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.search-bar input#busqueda:focus {
-    background-color: var(--color-blanco);
-    color: var(--color-texto);
-    border-color: var(--color-secundario);
-    box-shadow: 0 0 0 3px rgba(255, 213, 0, 0.3);
+.horarios-text {
+    font-weight: 600;
 }
 
 /* --- SUBMENÚ DESPLEGABLE PREMIUM --- */
