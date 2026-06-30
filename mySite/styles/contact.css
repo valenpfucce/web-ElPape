@@ -53,11 +53,22 @@
 }
 
 .info-card h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     color: var(--color-primario); 
     font-size: 1.35rem;
     margin-bottom: 15px;
     font-family: var(--font-titulos);
     font-weight: 700;
+}
+
+.info-card-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 15%;
 }
 
 .info-card p {
