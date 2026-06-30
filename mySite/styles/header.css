@@ -13,15 +13,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 10px 20px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 .logo-header-content {
-    height: 60px;
+    height: 65px;
     width: auto;
     display: block;
     transition: transform var(--transition-normal);
@@ -89,9 +89,9 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 2px;
+    width: 1px;
     height: 24px;
-    background-color: var(--color-borde);
+    background-color: var(--color-secundario);
 }
 
 
