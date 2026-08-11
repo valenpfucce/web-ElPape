@@ -137,3 +137,45 @@
         gap: 30px;
     }
 }
+
+/* --- BOTÓN FLOTANTE DE WHATSAPP --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 52px;
+        height: 52px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    .whatsapp-float:hover {
+        transform: scale(1.05);
+    }
+}
